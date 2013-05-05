@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pausas activas</title>
+<script type="text/javascript" charset="utf-8" src="lib/cordova-2.7.0.js"></script>
+<script>
+//Esperamos que Cordova (PhoneGap) esté cargado
+document.addEventListener("deviceready", iniciarAplicacion, false);
+// IniciarAplicacion es la funcion que manejadora del evento deviceready
+function iniciarAplicacion(){
+    //la variable elemento guarda una referencia a un elemento
+
+//div donde se muestran las propiedades obtenidas con PhoneGap
+
+var elemento = document.getElementById('propiedades');
+
+//la variable informacion guarda todas las propiedades obtenidas con PhoneGap
+
+var informacion='Nombre del dispositivo ' + device.name + '<br />' +
+
+'Version de Cordova: ' + device.cordova + '<br />' +
+
+'Sistema operativo: ' + device.platform + '<br />' +
+
+'Version: ' + device.version + '<br />'+
+
+'Identificador unico universal: ' + device.uuid + '<br />';
+
+elemento.innerHTML = informacion;
+}
+</script> 
+</head>
+<body>
+    <div id="propiedades">Cargando datos del dispositivo</div>
+</body>
+</html> 
